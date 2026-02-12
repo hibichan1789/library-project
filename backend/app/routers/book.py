@@ -4,7 +4,7 @@ from ..database import get_session
 from ..models import Book, BookDto
 
 router = APIRouter(prefix="/books", tags=["books"])
-#prefix:エンドポイントのパスの始まりを決める,tagがswagger上の表示を決める
+#prefix:エンドポイントのパスの始まりを決める,tagsがswagger上の表示を決める
 
 @router.post("/", status_code=201)
 def create_book(book_in:BookDto, session:Session=Depends(get_session)):
