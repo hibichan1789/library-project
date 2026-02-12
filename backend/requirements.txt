@@ -1,0 +1,6 @@
+#/backend/requirements.txt
+fastapi
+unicorn[standard]
+python-dotenv
+python-multipart
+sqlmodel

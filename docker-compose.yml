@@ -1,0 +1,16 @@
+services:
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "${BACKEND_PORT}:8000"
+    volumes:
+      #これがpythonファイルのマウント
+      - ./backend/app:/code/app
+      #これがDBファイルのマウント
+      - ./backend/data:/code/data
+    env_file:
+      - .env
+      - ./backend/.env
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
