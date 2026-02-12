@@ -12,7 +12,8 @@ node_modules/
 dist/
 dist-srr/
 
-
+data/
 .DS_Store
 Thumbs.db
 .vscode/
+

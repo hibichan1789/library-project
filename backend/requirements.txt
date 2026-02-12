@@ -1,6 +1,6 @@
 #/backend/requirements.txt
 fastapi
-unicorn[standard]
+uvicorn[standard]
 python-dotenv
 python-multipart
 sqlmodel
